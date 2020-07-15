@@ -1,4 +1,7 @@
 /* Base Styles ----------------- */
+* {
+  box-sizing: border-box;
+}
 body {
   font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #878787;
@@ -26,13 +29,13 @@ h3 {
 }
 
 /* Pseudo-Classes ------------------ */
-a:link{
+a:link {
   text-decoration: none;
   color: #ffa949;
 }
 
-a:visited {
-  color: lightblue;
+a:visited { 
+  color: #ffa949;
 }
 a:hover{
   color: rgba(255, 169, 73, .4);
@@ -46,17 +49,24 @@ a:active {
 
 /* Main Styles ---------------------- */
 .main-header {
-    background-color: #ffa949;
+  background-color: #ffa949;
 }
 
-
-.primary-content {
-  padding-bottom: 10px;
+.title {
+  color: white;
+  font-size: 1.625rem; /* 26px/16px*/
 }
 
+.intro {
+  font-size: 1.25em;  /* 20px/16px*/
+  line-height: 1.6;
+}
 
+.primary-content, .main-header, .main-footer{
+  text-align: center;
+}
 
-#main-footer {
+.main-footer {
   padding-top: 50px;
   padding-bottom: 50px;
   border-bottom: solid 10px #ffa949;
@@ -78,4 +88,8 @@ a:active {
 
 .primary-content, .secondary-content {
   width: 60%;
+  display: block;
+  margin: auto
+
 }
+
