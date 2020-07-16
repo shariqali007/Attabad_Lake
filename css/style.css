@@ -29,7 +29,14 @@ h3 {
   line-height: 1.7em; /* 34px/20px  */
 }
 
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+
 /* Pseudo-Classes ------------------ */
+
 a:link {
   text-decoration: none;
   color: #ffa949;
@@ -46,11 +53,13 @@ a:active {
   color: lightcoral;
 }
 
-
-
 /* Main Styles ---------------------- */
+
 .main-header {
-  background-color: #ffa949;
+  padding-top: 170px;
+  height: 850px;
+  
+  background: #ffa949 url('../img/mountains.jpg') no-repeat center /cover;
 }
 
 .title {
@@ -66,6 +75,18 @@ a:active {
 .primary-content, .main-header, .main-footer{
   text-align: center;
 }
+
+.secondary-content {
+  padding-top: 80px;
+  padding-bottom: 70px;
+  border-bottom: 2px solid lightgrey;
+}
+
+.primary-content {
+  padding-top: 80px;
+  padding-bottom: 95px;
+}
+
 
 .callout {
   font-size: 1.25em;
@@ -83,13 +104,16 @@ a:active {
   }
 
 .t-border {
-  border-top: 1px solid lightgrey;
+  border-top: 2px solid lightgrey;
 }
 
 /* Layout Styles ---------------------------- */
 
 .primary-content, .secondary-content {
-  width: 60%;
+  width: 75%;
+  max-width: 900px;
+  padding-left: 50px;
+  padding-right: 50px;
   margin: auto
 
 }
@@ -103,17 +127,27 @@ a:active {
   margin: 105px 0 30px;
 }
 
-.secondary-content {
-  padding-top: 80px;
-  padding-bottom: 105px;
-
-  border-bottom: 2px dotted lightgrey;
-}
-
-.primary-content {
-  margin-bottom: 60px;
-}
-
 .arrow {
   width: 50px;
+}
+/* Floated Columns  ---------------------------- */
+
+.resorts, .tips {
+  width: 46%;
+}
+
+.tips {
+  float: left;
+}
+
+.resorts {
+  float: right;
+}
+
+/* Float Clear overflow  ---------------------------- */
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
 }
