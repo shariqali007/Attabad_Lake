@@ -7,8 +7,6 @@
        url('../fonts/abolition-regular-webfont.woff') format('woff'), /* Web Open Font Format - Mozilla*/
        url('../fonts/abolition-regular-webfont.ttf') format('truetype');  /* TrueType Format */
 }
-/* Blank Use*/
-
 
 /* Base Styles ----------------- */
 * {
@@ -197,4 +195,60 @@ a:active {
   content: "";
   display: table;
   clear: both;
+}
+
+/*  Media Queries ------------------------ */
+
+@media (max-width: 1024px) {
+  .primary-content, 
+  .secondary-content {
+    width: 90%;
+  }
+
+  .wildlife {
+    padding: 10% 12%;
+    margin: 50px 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .primary-content,
+  .secondary-content {
+    width: 100%;
+    padding: 20px;
+    border-top: none;
+  }
+
+  .main-header {
+    max-height: 380px;
+    padding: 50px 25px 0;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .title {
+    font-size: 1.3rem;
+    border-style: none;
+  }
+
+  h1 {
+    font-size: 5rem;
+    line-height: 1.1;
+  }
+  
+  .intro {
+    font-size: 1rem;
+  }
+
+  .resorts,
+  .tips {
+    float: none;
+    width: 100%;
+  }
+
+  .main-footer {
+    padding: 20px 0;
+  }
 }
